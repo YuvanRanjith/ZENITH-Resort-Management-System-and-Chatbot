@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ivory-50 text-midnight-900 font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+  ::selection {
+    @apply bg-champagne-300/40 text-midnight-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-midnight-900 px-6 py-3 text-sm font-medium text-ivory-50 shadow-soft transition hover:bg-midnight-800 hover:shadow-soft-lg active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-champagne-500 px-6 py-3 text-sm font-medium text-midnight-950 shadow-gold transition hover:bg-champagne-400 hover:shadow-soft-lg active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-midnight-300 bg-transparent px-6 py-3 text-sm font-medium text-midnight-800 transition hover:bg-midnight-50 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-midnight-700 transition hover:bg-midnight-50 active:scale-[0.98];
+  }
+  .input-field {
+    @apply w-full rounded-xl border border-stone-200 bg-white px-4 py-2.5 text-sm text-stone-900 shadow-sm transition placeholder:text-stone-400 focus:border-champagne-500 focus:outline-none focus:ring-2 focus:ring-champagne-500/20;
+  }
+  .card {
+    @apply rounded-2xl bg-white shadow-soft border border-stone-100;
+  }
+  .section-eyebrow {
+    @apply inline-block text-xs font-semibold uppercase tracking-[0.25em] text-champagne-600;
+  }
+}
